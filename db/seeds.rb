@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+4.times do
+  Flat.create(name: Faker::Movies::HarryPotter.location, address: Faker::Address.full_address, description: Faker::Lorem.sentences(number: 3 ), price_per_night: Faker::Number.decimal(l_digits: 2), number_of_guests: Faker::Number.between(from: 1, to: 10))
+end
